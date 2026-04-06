@@ -1,0 +1,17 @@
+{
+  "config": {
+    // Allow inline HTML (Astro components in markdown)
+    "MD033": false,
+    // Allow duplicate headings in different sections
+    "MD024": { "siblings_only": true },
+    // Allow trailing punctuation in headings (Japanese content)
+    "MD026": false,
+    // Line length - disabled for Japanese content
+    "MD013": false,
+    // Allow bare URLs
+    "MD034": false,
+    // First line heading - disabled because frontmatter comes first
+    "MD041": false
+  },
+  "globs": ["src/blog/**/*.md"]
+}

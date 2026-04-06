@@ -39,4 +39,5 @@ tags: ["放送大学", "編入"]
 
 ---
 
+<!-- markdownlint-disable MD036 -->
 *この記事はAI（Claude）でギャル語に変換しました🤖💅✨ 内容はガチだょ💯*
