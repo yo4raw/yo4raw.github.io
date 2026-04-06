@@ -1,0 +1,33 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="border-b border-neutral-800">
+  <nav class="max-w-3xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="text-lg font-bold hover:text-neutral-300 transition-colors"
+      >yo4raw</a
+    >
+    <div class="flex gap-6 text-sm">
+      <a
+        href="/"
+        class:list={[
+          "hover:text-neutral-300 transition-colors",
+          { "text-white": currentPath === "/" },
+          { "text-neutral-400": currentPath !== "/" },
+        ]}
+      >
+        Home
+      </a>
+      <a
+        href="/blog"
+        class:list={[
+          "hover:text-neutral-300 transition-colors",
+          { "text-white": currentPath.startsWith("/blog") },
+          { "text-neutral-400": !currentPath.startsWith("/blog") },
+        ]}
+      >
+        Blog
+      </a>
+    </div>
+  </nav>
+</header>

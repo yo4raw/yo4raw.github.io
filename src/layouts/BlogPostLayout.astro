@@ -1,0 +1,37 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Prose from "../components/Prose.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  tags: string[];
+}
+
+const { title, description, pubDate, tags } = Astro.props;
+const formattedDate = pubDate.toLocaleDateString("ja-JP", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold mb-2">{title}</h1>
+      <time class="text-neutral-400 text-sm">{formattedDate}</time>
+      <div class="flex gap-2 mt-3">
+        {
+          tags.map((tag) => (
+            <span class="text-xs bg-neutral-800 px-2 py-1 rounded">{tag}</span>
+          ))
+        }
+      </div>
+    </header>
+    <Prose>
+      <slot />
+    </Prose>
+  </article>
+</BaseLayout>
