@@ -71,8 +71,8 @@ jobs:
         with:
           args: >-
             --no-progress
-            --exclude-mail
             --exclude 'yo4raw\.github\.io'
+            --exclude 'mailto:'
             'dist/**/*.html'
           fail: true
 

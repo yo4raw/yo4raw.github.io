@@ -18,7 +18,7 @@ const formattedDate = pubDate.toLocaleDateString("ja-JP", {
   <article
     class="border border-neutral-800 rounded-lg p-5 hover:border-neutral-600 transition-colors"
   >
-    <time class="text-xs text-neutral-500">{formattedDate}</time>
+    <time datetime={pubDate.toISOString()} class="text-xs text-neutral-500">{formattedDate}</time>
     <h2 class="text-xl font-semibold mt-1 group-hover:text-neutral-300">
       {title}
     </h2>

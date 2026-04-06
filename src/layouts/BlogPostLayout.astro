@@ -21,7 +21,7 @@ const formattedDate = pubDate.toLocaleDateString("ja-JP", {
   <article>
     <header class="mb-8">
       <h1 class="text-3xl font-bold mb-2">{title}</h1>
-      <time class="text-neutral-400 text-sm">{formattedDate}</time>
+      <time datetime={pubDate.toISOString()} class="text-neutral-400 text-sm">{formattedDate}</time>
       <div class="flex gap-2 mt-3">
         {
           tags.map((tag) => (
